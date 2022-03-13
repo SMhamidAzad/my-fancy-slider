@@ -10,8 +10,10 @@ document.getElementById('searchPic').addEventListener('click',function (){
     fetch(url).then(res=>res.json()).then(data => displayImage(data.hits)).catch(data=> console.log(data))
 })
 const displayImage = images =>{
+
     // console.log(images);
     const imgDiv = document.getElementById('img-container');
+    imgDiv.textContent="";
     images.forEach(img =>{
         // console.log(img.previewURL);
         const div = document.createElement('div');
