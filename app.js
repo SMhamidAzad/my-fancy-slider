@@ -35,7 +35,11 @@ const touchPic = (event,img) =>{
 const seeSlider = ()=>{
     document.getElementById('img-container').textContent="";
     const durationText = document.getElementById('duration');
-    const duration = durationText.value;
+    const durationInsec = durationText.value;
+    const duration=parseInt(durationInsec*1000);
+    if(duration<1){
+        return;
+    }
 
     const sliderDiv = document.getElementById('sliders');
     const img = document.getElementById('img-show');
