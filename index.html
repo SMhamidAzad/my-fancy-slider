@@ -25,23 +25,29 @@
         }
         @media (max-width: 688px) {
             .header{
-                width: 100%;
+                width: 100% !important;
+            }
+            .sub-header{
+                width: 30% !important;
+            }
+            .slide-img{
+                width: 100% !important;
             }
         }
     </style>
 </head>
 
 <body class="container main-color">
-    <h1 style="font-size: 3.3em;" class="text-center text-warning mt-5 header">Make Your Fancy Slider Here!</h1>
+    <h1 style="font-size: 3.3em;" class="text-center text-warning mt-5">Make Your Fancy Slider Here!</h1>
     <header>
-        <div  class="input-group mb-3 w-50 mx-auto mt-4">
+        <div  class="input-group mb-3 w-50 mx-auto mt-4 header">
             <input id="search-field" type="text" class="form-control" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default">
             <button id="searchPic" class="input-group-text btn btn-outline-warning border-3" id="inputGroup-sizing-default">Search</button>
         </div>
     </header>
     <section class="mb-5">
-        <input class="rounded" id="duration" type="">
+        <input class="rounded sub-header" id="duration" type="">
         <button class="btn btn-outline-warning" onclick="seeSlider()">Duration</button>
     </section>
 
@@ -56,7 +62,7 @@
     <!-- slider show  -->
     <section>
         <div class="mb-4 d-flex justify-content-center" id="sliders">
-            <img  width="70%" id="img-show" src="" alt="">
+            <img class="slide-img"  width="70%" id="img-show" src="" alt="">
         </div>
     </section>
 

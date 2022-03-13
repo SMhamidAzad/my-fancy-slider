@@ -4,6 +4,7 @@ const KEY = '15674931-a9d714b6e9d654524df198e00&q';
 document.getElementById('searchPic').addEventListener('click',function (){
     const picText = document.getElementById('search-field');
     const pic = picText.value;
+    picText.value="";
 
     const url = `https://pixabay.com/api/?key=${KEY}=${pic}&image_type=photo&pretty=true`;
     fetch(url).then(res=>res.json()).then(data => displayImage(data.hits)).catch(data=> console.log(data))
